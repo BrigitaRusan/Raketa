@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raketa", "Raketa\Raketa.csproj", "{2FDAD5FD-3F58-4BBF-A914-0D79453908FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FDAD5FD-3F58-4BBF-A914-0D79453908FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDAD5FD-3F58-4BBF-A914-0D79453908FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDAD5FD-3F58-4BBF-A914-0D79453908FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDAD5FD-3F58-4BBF-A914-0D79453908FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD031EDB-3E12-495C-A9E3-36CC88EB00D6}
+	EndGlobalSection
+EndGlobal
