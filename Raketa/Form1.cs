@@ -30,10 +30,9 @@ namespace Raketa
         {
             InitializeComponent();
 
+            // na gumb paljenje i gasenje zvuka u postavkama
             if(zvuk)
-            {
                 playSimpleSound();
-            }
             
 
             sirina = ClientSize.Width;
@@ -51,10 +50,6 @@ namespace Raketa
             //labelaBodovi1.Parent = prepreka2;
 
             //labelaBodovi.Location = labelaBodovi1.Location = new Point(4, 4);
-
-
-
-
 
         }
 
@@ -109,7 +104,7 @@ namespace Raketa
         void povecajBodove(int dobiveniBodovi)
         {
             bodovi += dobiveniBodovi;
-            labelaBodovi.Text  //labelaBodovi1.Text
+            labelaBodovi.Text
                 = "Bodovi: " + bodovi;
         }
 
@@ -152,8 +147,6 @@ namespace Raketa
             koordPozadina = new float[] { -visina, 0 };
             koordZid = new float[] { -visina, 0 };
             brzinaPozadine = 0.5f;
-            //brzinaZida = 4;
-            //brzinaBroda = 5;
             brod.Location = new Point
                 ((int)sirina / 2 - brod.Size.Width / 2,
                 (int)visina - brod.Size.Height - 50);
@@ -235,7 +228,7 @@ namespace Raketa
                         {
                             Pauziraj();
 
-                            //------ukloni komet------
+                            //------ukloni komet ako se sudari------
                             x.Visible = false;
                             Controls.Remove(kontrola);
                             x.Dispose();
@@ -262,7 +255,6 @@ namespace Raketa
         {
 
             timer1.Stop();
-            //labelaZivot.Visible = true;  
             timerTitraj.Start();
             zivoti--;
             brojZivota();
@@ -277,8 +269,7 @@ namespace Raketa
             int y2 = pozicijaPrepreke2.Y;
 
             prepreka1.Location = new Point(10, y1-50);
-            prepreka2.Location = new Point(280, y2-50);
-            //labelaZivot.Visible = false;
+            prepreka2.Location = new Point(280, y2 - 50);
 
         }
         private void GameOver()
@@ -301,8 +292,7 @@ namespace Raketa
 
         private void PomakniPozadinu()
         {
-            //if (!omoguciPomakPozadine)
-               // return;
+
             for (int i = 0; i < 2; i++)
             {
                 if (koordPozadina[i] > visina)
@@ -369,15 +359,9 @@ namespace Raketa
 
         private void playSimpleSound()
         {
-
-
-            // Formirajte relativnu putanju do zvuka
             string soundFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Raketa/Resources/zvuk.wav");
-
-            // Kreirajte instancu SoundPlayer klase
             SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.zvuk);
 
-            // Reprodukujte zvuk
             simpleSound.PlayLooping();
         }
 
@@ -396,18 +380,18 @@ namespace Raketa
             Controls.Add(komet);
             //komet.BringToFront();
         }
-        private void StvoriStvari()
+        private void StvoriGorivo()
         {
-            PictureBox stvar = new PictureBox();
-            stvar.Size = new Size(20, 20);
-            stvar.Image = Raketa.Properties.Resources.komet;
-            stvar.BackColor = Color.Transparent;
-            stvar.Top = -stvar.Height;
-            stvar.Left = (int)(0.1 * sirina + 1)
-                + random.Next(0, (int)(0.8 * sirina - stvar.Width));
-            stvar.Tag = "stvar";
-            Controls.Add(stvar);
-            stvar.BringToFront();
+            PictureBox gorivo = new PictureBox();
+            gorivo.Size = new Size(20, 20);
+            gorivo.Image = Raketa.Properties.Resources.gorivo;
+            gorivo.BackColor = Color.Transparent;
+            gorivo.Top = -gorivo.Height;
+            gorivo.Left = (int)(0.1 * sirina + 1)
+                + random.Next(0, (int)(0.8 * sirina - gorivo.Width));
+            gorivo.Tag = "gorivo";
+            Controls.Add(gorivo);
+            gorivo.BringToFront();
 
         }
 
