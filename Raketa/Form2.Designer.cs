@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.gumbPovratak = new System.Windows.Forms.Button();
             this.slikaBrod = new System.Windows.Forms.PictureBox();
             this.slikaRaketa1 = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,8 @@
             this.razinaLagana = new System.Windows.Forms.Button();
             this.razinaSrednja = new System.Windows.Forms.Button();
             this.razinaTeska = new System.Windows.Forms.Button();
+            this.gumbZvukOff = new System.Windows.Forms.Button();
+            this.gumbZvukOn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.slikaBrod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slikaRaketa1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slikaRaketa2)).BeginInit();
@@ -93,7 +96,7 @@
             // gumbRaketa1
             // 
             this.gumbRaketa1.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbRaketa1.Location = new System.Drawing.Point(32, 204);
+            this.gumbRaketa1.Location = new System.Drawing.Point(32, 191);
             this.gumbRaketa1.Name = "gumbRaketa1";
             this.gumbRaketa1.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa1.TabIndex = 5;
@@ -104,7 +107,7 @@
             // gumbBrod
             // 
             this.gumbBrod.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbBrod.Location = new System.Drawing.Point(158, 204);
+            this.gumbBrod.Location = new System.Drawing.Point(158, 191);
             this.gumbBrod.Name = "gumbBrod";
             this.gumbBrod.Size = new System.Drawing.Size(90, 40);
             this.gumbBrod.TabIndex = 6;
@@ -115,7 +118,7 @@
             // gumbRaketa2
             // 
             this.gumbRaketa2.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbRaketa2.Location = new System.Drawing.Point(274, 204);
+            this.gumbRaketa2.Location = new System.Drawing.Point(274, 191);
             this.gumbRaketa2.Name = "gumbRaketa2";
             this.gumbRaketa2.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa2.TabIndex = 7;
@@ -141,7 +144,7 @@
             this.Razina.BackColor = System.Drawing.Color.Transparent;
             this.Razina.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Razina.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Razina.Location = new System.Drawing.Point(19, 270);
+            this.Razina.Location = new System.Drawing.Point(19, 253);
             this.Razina.Name = "Razina";
             this.Razina.Size = new System.Drawing.Size(112, 16);
             this.Razina.TabIndex = 9;
@@ -150,7 +153,7 @@
             // razinaLagana
             // 
             this.razinaLagana.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaLagana.Location = new System.Drawing.Point(32, 320);
+            this.razinaLagana.Location = new System.Drawing.Point(32, 287);
             this.razinaLagana.Name = "razinaLagana";
             this.razinaLagana.Size = new System.Drawing.Size(90, 40);
             this.razinaLagana.TabIndex = 10;
@@ -161,7 +164,7 @@
             // razinaSrednja
             // 
             this.razinaSrednja.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaSrednja.Location = new System.Drawing.Point(158, 320);
+            this.razinaSrednja.Location = new System.Drawing.Point(158, 287);
             this.razinaSrednja.Name = "razinaSrednja";
             this.razinaSrednja.Size = new System.Drawing.Size(90, 40);
             this.razinaSrednja.TabIndex = 11;
@@ -172,13 +175,37 @@
             // razinaTeska
             // 
             this.razinaTeska.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaTeska.Location = new System.Drawing.Point(274, 320);
+            this.razinaTeska.Location = new System.Drawing.Point(274, 287);
             this.razinaTeska.Name = "razinaTeska";
             this.razinaTeska.Size = new System.Drawing.Size(90, 40);
             this.razinaTeska.TabIndex = 12;
             this.razinaTeska.Text = "Teška";
             this.razinaTeska.UseVisualStyleBackColor = false;
             this.razinaTeska.Click += new System.EventHandler(this.razinaTeska_Click);
+            // 
+            // gumbZvukOff
+            // 
+            this.gumbZvukOff.BackColor = System.Drawing.Color.DarkGray;
+            this.gumbZvukOff.ForeColor = System.Drawing.Color.Transparent;
+            this.gumbZvukOff.Image = ((System.Drawing.Image)(resources.GetObject("gumbZvukOff.Image")));
+            this.gumbZvukOff.Location = new System.Drawing.Point(224, 363);
+            this.gumbZvukOff.Name = "gumbZvukOff";
+            this.gumbZvukOff.Size = new System.Drawing.Size(57, 48);
+            this.gumbZvukOff.TabIndex = 14;
+            this.gumbZvukOff.UseVisualStyleBackColor = false;
+            this.gumbZvukOff.Click += new System.EventHandler(this.gumbZvukOff_Click);
+            // 
+            // gumbZvukOn
+            // 
+            this.gumbZvukOn.BackColor = System.Drawing.Color.DarkGray;
+            this.gumbZvukOn.ForeColor = System.Drawing.Color.Transparent;
+            this.gumbZvukOn.Image = ((System.Drawing.Image)(resources.GetObject("gumbZvukOn.Image")));
+            this.gumbZvukOn.Location = new System.Drawing.Point(136, 363);
+            this.gumbZvukOn.Name = "gumbZvukOn";
+            this.gumbZvukOn.Size = new System.Drawing.Size(57, 48);
+            this.gumbZvukOn.TabIndex = 15;
+            this.gumbZvukOn.UseVisualStyleBackColor = false;
+            this.gumbZvukOn.Click += new System.EventHandler(this.gumbZvukOn_Click);
             // 
             // Form2
             // 
@@ -187,6 +214,8 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BackgroundImage = global::Raketa.Properties.Resources.pozadina;
             this.ClientSize = new System.Drawing.Size(418, 530);
+            this.Controls.Add(this.gumbZvukOn);
+            this.Controls.Add(this.gumbZvukOff);
             this.Controls.Add(this.razinaTeska);
             this.Controls.Add(this.razinaSrednja);
             this.Controls.Add(this.razinaLagana);
@@ -227,6 +256,8 @@
         private System.Windows.Forms.Button razinaLagana;
         private System.Windows.Forms.Button razinaSrednja;
         private System.Windows.Forms.Button razinaTeska;
+        private System.Windows.Forms.Button gumbZvukOff;
+        private System.Windows.Forms.Button gumbZvukOn;
     }
 }
 

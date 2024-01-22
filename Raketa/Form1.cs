@@ -21,6 +21,7 @@ namespace Raketa
         public static string GlobalnaBrod = "Brod";
         public static string GlobalnaRazina = "Srednja";
         public static Size velicinaKometa = new Size(20, 20);
+        public static bool zvuk = true;
         //private bool omoguciPomakPozadine = true;
 
         //Timer timerTitraj = new Timer();
@@ -29,7 +30,11 @@ namespace Raketa
         {
             InitializeComponent();
 
-            playSimpleSound();
+            if(zvuk)
+            {
+                playSimpleSound();
+            }
+            
 
             sirina = ClientSize.Width;
             visina = ClientSize.Height;

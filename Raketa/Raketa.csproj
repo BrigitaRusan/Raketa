@@ -128,5 +128,11 @@
   <ItemGroup>
     <None Include="Resources\zvuk.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundOn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

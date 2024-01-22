@@ -52,6 +52,18 @@ namespace Raketa
             // Set focus to the selected button
             button.Focus();
         }
+        private void SetZvuk(Button button)
+        {
+            gumbZvukOff.BackColor = SystemColors.Control;
+            gumbZvukOn.BackColor = SystemColors.Control;
+
+            // Set the selected button's back color
+            button.BackColor = Color.Gray;
+
+            // Set focus to the selected button
+            button.Focus();
+
+        }
         private void gumbRaketa1_Click(object sender, EventArgs e)
         {
 
@@ -112,8 +124,23 @@ namespace Raketa
                 SetLevelSelected(razinaSrednja);
             else if (Form1.GlobalnaRazina == "Teska")
                 SetLevelSelected(razinaTeska);
+
+            if (Form1.zvuk == true)
+                SetZvuk(gumbZvukOn);
+            else
+                SetZvuk(gumbZvukOff);
         }
 
+        private void gumbZvukOn_Click(object sender, EventArgs e)
+        {
+            SetZvuk(gumbZvukOn);
+            Form1.zvuk = true;
+        }
 
+        private void gumbZvukOff_Click(object sender, EventArgs e)
+        {
+            SetZvuk(gumbZvukOff);
+            Form1.zvuk = false;
+        }
     }
 }
