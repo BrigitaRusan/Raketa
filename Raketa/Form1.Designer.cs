@@ -42,6 +42,8 @@
             this.prepreka2 = new System.Windows.Forms.PictureBox();
             this.prepreka1 = new System.Windows.Forms.PictureBox();
             this.brod = new System.Windows.Forms.PictureBox();
+            this.timerTitraj = new System.Windows.Forms.Timer(this.components);
+            this.labelaZivot = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.srce3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srce2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srce1)).BeginInit();
@@ -164,12 +166,31 @@
             this.brod.TabIndex = 0;
             this.brod.TabStop = false;
             // 
+            // timerTitraj
+            // 
+            this.timerTitraj.Interval = 500;
+            this.timerTitraj.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // labelaZivot
+            // 
+            this.labelaZivot.AutoSize = true;
+            this.labelaZivot.BackColor = System.Drawing.Color.Firebrick;
+            this.labelaZivot.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelaZivot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.labelaZivot.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelaZivot.Location = new System.Drawing.Point(145, 113);
+            this.labelaZivot.Name = "labelaZivot";
+            this.labelaZivot.Size = new System.Drawing.Size(236, 33);
+            this.labelaZivot.TabIndex = 13;
+            this.labelaZivot.Text = "Izgubili ste život!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(532, 553);
+            this.Controls.Add(this.labelaZivot);
             this.Controls.Add(this.srce3);
             this.Controls.Add(this.srce2);
             this.Controls.Add(this.srce1);
@@ -214,6 +235,8 @@
         private System.Windows.Forms.PictureBox srce1;
         private System.Windows.Forms.PictureBox srce2;
         private System.Windows.Forms.PictureBox srce3;
+        private System.Windows.Forms.Timer timerTitraj;
+        private System.Windows.Forms.Label labelaZivot;
     }
 }
 

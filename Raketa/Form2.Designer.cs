@@ -97,7 +97,7 @@
             this.gumbRaketa1.Name = "gumbRaketa1";
             this.gumbRaketa1.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa1.TabIndex = 5;
-            this.gumbRaketa1.Text = "Odaberi";
+            this.gumbRaketa1.Text = "Debeljuco";
             this.gumbRaketa1.UseVisualStyleBackColor = false;
             this.gumbRaketa1.Click += new System.EventHandler(this.gumbRaketa1_Click);
             // 
@@ -108,7 +108,7 @@
             this.gumbBrod.Name = "gumbBrod";
             this.gumbBrod.Size = new System.Drawing.Size(90, 40);
             this.gumbBrod.TabIndex = 6;
-            this.gumbBrod.Text = "Odaberi";
+            this.gumbBrod.Text = "Brzi";
             this.gumbBrod.UseVisualStyleBackColor = false;
             this.gumbBrod.Click += new System.EventHandler(this.gumbBrod_Click);
             // 
@@ -119,7 +119,7 @@
             this.gumbRaketa2.Name = "gumbRaketa2";
             this.gumbRaketa2.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa2.TabIndex = 7;
-            this.gumbRaketa2.Text = "Odaberi";
+            this.gumbRaketa2.Text = "Svemirski";
             this.gumbRaketa2.UseVisualStyleBackColor = false;
             this.gumbRaketa2.Click += new System.EventHandler(this.gumbRaketa2_Click);
             // 

@@ -15,9 +15,7 @@ namespace Raketa
         public Form2()
         {
             InitializeComponent();
-            SetButtonSelected(gumbBrod);
-            SetLevelSelected(razinaSrednja);
-
+            InicijalizirajPostavke();
         }
 
         private void gumbPovratak_Click(object sender, EventArgs e)
@@ -58,16 +56,19 @@ namespace Raketa
         {
 
             SetButtonSelected(gumbRaketa1);
+            Form1.GlobalnaBrod = "Raketa1";
         }
 
         private void gumbRaketa2_Click(object sender, EventArgs e)
         {
             SetButtonSelected(gumbRaketa2);
+            Form1.GlobalnaBrod = "Raketa2";
         }
 
         private void gumbBrod_Click(object sender, EventArgs e)
         {
             SetButtonSelected(gumbBrod);
+            Form1.GlobalnaBrod = "Brod";
         }
 
         private void Form2_Load_1(object sender, EventArgs e)
@@ -78,16 +79,41 @@ namespace Raketa
         private void razinaSrednja_Click(object sender, EventArgs e)
         {
             SetLevelSelected(razinaSrednja);
+            Form1.GlobalnaRazina = "Srednja";
         }
 
         private void razinaLagana_Click(object sender, EventArgs e)
         {
             SetLevelSelected(razinaLagana);
+            Form1.GlobalnaRazina = "Lagana";
         }
 
         private void razinaTeska_Click(object sender, EventArgs e)
         {
             SetLevelSelected(razinaTeska);
+            Form1.GlobalnaRazina = "Teska";
         }
+
+        private void InicijalizirajPostavke()
+        {
+            if (Form1.GlobalnaBrod == "Brod")
+                SetButtonSelected(gumbBrod);
+         
+            else if(Form1.GlobalnaBrod == "Raketa1")
+                SetButtonSelected(gumbRaketa1);
+            
+            else if (Form1.GlobalnaBrod == "Raketa2")
+                SetButtonSelected(gumbRaketa2);
+
+            if (Form1.GlobalnaRazina == "Lagana")
+                SetLevelSelected(razinaLagana);
+
+            else if (Form1.GlobalnaRazina == "Srednja")
+                SetLevelSelected(razinaSrednja);
+            else if (Form1.GlobalnaRazina == "Teska")
+                SetLevelSelected(razinaTeska);
+        }
+
+
     }
 }
