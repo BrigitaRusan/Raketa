@@ -201,6 +201,7 @@
             this.Controls.Add(this.prepreka2);
             this.Controls.Add(this.prepreka1);
             this.Controls.Add(this.brod);
+
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

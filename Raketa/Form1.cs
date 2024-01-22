@@ -378,7 +378,7 @@ namespace Raketa
             SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.zvuk);
 
             // Reprodukujte zvuk
-            simpleSound.Play();
+            simpleSound.PlayLooping();
         }
 
 

@@ -55,7 +55,7 @@
             this.gumbPovratak.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gumbPovratak.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gumbPovratak.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gumbPovratak.Location = new System.Drawing.Point(106, 434);
+            this.gumbPovratak.Location = new System.Drawing.Point(106, 440);
             this.gumbPovratak.Name = "gumbPovratak";
             this.gumbPovratak.Size = new System.Drawing.Size(200, 50);
             this.gumbPovratak.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.slikaBrod.BackColor = System.Drawing.Color.Transparent;
             this.slikaBrod.Image = global::Raketa.Properties.Resources.brod;
-            this.slikaBrod.Location = new System.Drawing.Point(168, 66);
+            this.slikaBrod.Location = new System.Drawing.Point(168, 57);
             this.slikaBrod.Name = "slikaBrod";
             this.slikaBrod.Size = new System.Drawing.Size(80, 100);
             this.slikaBrod.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.slikaRaketa1.BackColor = System.Drawing.Color.Transparent;
             this.slikaRaketa1.Image = global::Raketa.Properties.Resources.raketa1;
-            this.slikaRaketa1.Location = new System.Drawing.Point(22, 66);
+            this.slikaRaketa1.Location = new System.Drawing.Point(22, 57);
             this.slikaRaketa1.Name = "slikaRaketa1";
             this.slikaRaketa1.Size = new System.Drawing.Size(100, 100);
             this.slikaRaketa1.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.slikaRaketa2.BackColor = System.Drawing.Color.Transparent;
             this.slikaRaketa2.Image = global::Raketa.Properties.Resources.raketa2;
-            this.slikaRaketa2.Location = new System.Drawing.Point(264, 66);
+            this.slikaRaketa2.Location = new System.Drawing.Point(264, 57);
             this.slikaRaketa2.Name = "slikaRaketa2";
             this.slikaRaketa2.Size = new System.Drawing.Size(100, 100);
             this.slikaRaketa2.TabIndex = 4;
@@ -96,7 +96,7 @@
             // gumbRaketa1
             // 
             this.gumbRaketa1.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbRaketa1.Location = new System.Drawing.Point(32, 191);
+            this.gumbRaketa1.Location = new System.Drawing.Point(32, 180);
             this.gumbRaketa1.Name = "gumbRaketa1";
             this.gumbRaketa1.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa1.TabIndex = 5;
@@ -107,7 +107,7 @@
             // gumbBrod
             // 
             this.gumbBrod.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbBrod.Location = new System.Drawing.Point(158, 191);
+            this.gumbBrod.Location = new System.Drawing.Point(158, 180);
             this.gumbBrod.Name = "gumbBrod";
             this.gumbBrod.Size = new System.Drawing.Size(90, 40);
             this.gumbBrod.TabIndex = 6;
@@ -118,7 +118,7 @@
             // gumbRaketa2
             // 
             this.gumbRaketa2.BackColor = System.Drawing.Color.DarkGray;
-            this.gumbRaketa2.Location = new System.Drawing.Point(274, 191);
+            this.gumbRaketa2.Location = new System.Drawing.Point(274, 180);
             this.gumbRaketa2.Name = "gumbRaketa2";
             this.gumbRaketa2.Size = new System.Drawing.Size(90, 40);
             this.gumbRaketa2.TabIndex = 7;
@@ -144,7 +144,7 @@
             this.Razina.BackColor = System.Drawing.Color.Transparent;
             this.Razina.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Razina.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Razina.Location = new System.Drawing.Point(19, 253);
+            this.Razina.Location = new System.Drawing.Point(19, 243);
             this.Razina.Name = "Razina";
             this.Razina.Size = new System.Drawing.Size(112, 16);
             this.Razina.TabIndex = 9;
@@ -153,7 +153,7 @@
             // razinaLagana
             // 
             this.razinaLagana.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaLagana.Location = new System.Drawing.Point(32, 287);
+            this.razinaLagana.Location = new System.Drawing.Point(32, 277);
             this.razinaLagana.Name = "razinaLagana";
             this.razinaLagana.Size = new System.Drawing.Size(90, 40);
             this.razinaLagana.TabIndex = 10;
@@ -164,7 +164,7 @@
             // razinaSrednja
             // 
             this.razinaSrednja.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaSrednja.Location = new System.Drawing.Point(158, 287);
+            this.razinaSrednja.Location = new System.Drawing.Point(158, 277);
             this.razinaSrednja.Name = "razinaSrednja";
             this.razinaSrednja.Size = new System.Drawing.Size(90, 40);
             this.razinaSrednja.TabIndex = 11;
@@ -175,7 +175,7 @@
             // razinaTeska
             // 
             this.razinaTeska.BackColor = System.Drawing.Color.DarkGray;
-            this.razinaTeska.Location = new System.Drawing.Point(274, 287);
+            this.razinaTeska.Location = new System.Drawing.Point(274, 277);
             this.razinaTeska.Name = "razinaTeska";
             this.razinaTeska.Size = new System.Drawing.Size(90, 40);
             this.razinaTeska.TabIndex = 12;
@@ -229,6 +229,7 @@
             this.Controls.Add(this.slikaBrod);
             this.Controls.Add(this.gumbPovratak);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Postavke";

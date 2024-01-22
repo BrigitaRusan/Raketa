@@ -34,7 +34,7 @@ namespace Raketa
             gumbRaketa2.BackColor = SystemColors.Control;
 
             // Set the selected button's back color
-            button.BackColor = Color.Gray;
+            button.BackColor = Color.DimGray;
 
             // Set focus to the selected button
             button.Focus();
@@ -47,7 +47,7 @@ namespace Raketa
            razinaTeska.BackColor = SystemColors.Control;
 
             // Set the selected button's back color
-            button.BackColor = Color.Gray;
+            button.BackColor = Color.DimGray;
 
             // Set focus to the selected button
             button.Focus();
@@ -58,7 +58,7 @@ namespace Raketa
             gumbZvukOn.BackColor = SystemColors.Control;
 
             // Set the selected button's back color
-            button.BackColor = Color.Gray;
+            button.BackColor = Color.DimGray;
 
             // Set focus to the selected button
             button.Focus();
