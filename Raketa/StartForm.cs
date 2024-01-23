@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Raketa
 {
@@ -15,6 +18,7 @@ namespace Raketa
         public StartForm()
         {
             InitializeComponent();
+            Form2.playSimpleSound();
         }
 
         private void gumbZatvori_Click(object sender, EventArgs e)
@@ -30,17 +34,17 @@ namespace Raketa
             Visible = true;
         }
 
-        private void StartForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void gumbPostavke_Click(object sender, EventArgs e)
         {
             Form2 formaZaPostavke = new Form2();
             Visible = false;
             formaZaPostavke.ShowDialog();
             Visible = true;
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

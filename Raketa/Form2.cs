@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,44 +14,42 @@ namespace Raketa
 {
     public partial class Form2 : Form
     {
+        public static bool zvuk = true;
         public Form2()
         {
             InitializeComponent();
             InicijalizirajPostavke();
         }
-
+        public static void playSimpleSound()
+        {
+            string soundFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Raketa/Resources/zvuk.wav");
+            SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.zvuk);
+            if (zvuk)
+                simpleSound.Play();
+            else
+                simpleSound.Stop();
+        }
         private void gumbPovratak_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-        }
         private void SetButtonSelected(Button button)
         {
-            // Reset all buttons' back color
             gumbBrod.BackColor = SystemColors.Control;
             gumbRaketa1.BackColor = SystemColors.Control;
             gumbRaketa2.BackColor = SystemColors.Control;
 
-            // Set the selected button's back color
             button.BackColor = Color.DimGray;
-
-            // Set focus to the selected button
             button.Focus();
         }
         private void SetLevelSelected(Button button)
         {
-            // Reset all buttons' back color
            razinaLagana.BackColor = SystemColors.Control;
            razinaSrednja.BackColor = SystemColors.Control;
            razinaTeska.BackColor = SystemColors.Control;
 
-            // Set the selected button's back color
             button.BackColor = Color.DimGray;
-
-            // Set focus to the selected button
             button.Focus();
         }
         private void SetZvuk(Button button)
@@ -57,16 +57,12 @@ namespace Raketa
             gumbZvukOff.BackColor = SystemColors.Control;
             gumbZvukOn.BackColor = SystemColors.Control;
 
-            // Set the selected button's back color
             button.BackColor = Color.DimGray;
-
-            // Set focus to the selected button
             button.Focus();
 
         }
         private void gumbRaketa1_Click(object sender, EventArgs e)
         {
-
             SetButtonSelected(gumbRaketa1);
             Form1.GlobalnaBrod = "Raketa1";
         }
@@ -81,11 +77,6 @@ namespace Raketa
         {
             SetButtonSelected(gumbBrod);
             Form1.GlobalnaBrod = "Brod";
-        }
-
-        private void Form2_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void razinaSrednja_Click(object sender, EventArgs e)
@@ -125,7 +116,7 @@ namespace Raketa
             else if (Form1.GlobalnaRazina == "Teska")
                 SetLevelSelected(razinaTeska);
 
-            if (Form1.zvuk == true)
+            if (zvuk == true)
                 SetZvuk(gumbZvukOn);
             else
                 SetZvuk(gumbZvukOff);
@@ -134,13 +125,15 @@ namespace Raketa
         private void gumbZvukOn_Click(object sender, EventArgs e)
         {
             SetZvuk(gumbZvukOn);
-            Form1.zvuk = true;
+            zvuk = true;
+            playSimpleSound();
         }
 
         private void gumbZvukOff_Click(object sender, EventArgs e)
         {
             SetZvuk(gumbZvukOff);
-            Form1.zvuk = false;
+            zvuk = false;
+            playSimpleSound();
         }
     }
 }

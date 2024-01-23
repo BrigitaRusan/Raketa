@@ -233,7 +233,6 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Postavke";
-            this.Load += new System.EventHandler(this.Form2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.slikaBrod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slikaRaketa1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slikaRaketa2)).EndInit();

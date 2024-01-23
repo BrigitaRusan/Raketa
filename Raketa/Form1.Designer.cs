@@ -43,7 +43,7 @@
             this.prepreka1 = new System.Windows.Forms.PictureBox();
             this.brod = new System.Windows.Forms.PictureBox();
             this.timerTitraj = new System.Windows.Forms.Timer(this.components);
-            this.labelaZivot = new System.Windows.Forms.Label();
+            this.plusPet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.srce3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srce2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.srce1)).BeginInit();
@@ -171,18 +171,18 @@
             this.timerTitraj.Interval = 500;
             this.timerTitraj.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // labelaZivot
+            // plusPet
             // 
-            this.labelaZivot.AutoSize = true;
-            this.labelaZivot.BackColor = System.Drawing.Color.Firebrick;
-            this.labelaZivot.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelaZivot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
-            this.labelaZivot.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelaZivot.Location = new System.Drawing.Point(145, 113);
-            this.labelaZivot.Name = "labelaZivot";
-            this.labelaZivot.Size = new System.Drawing.Size(236, 33);
-            this.labelaZivot.TabIndex = 13;
-            this.labelaZivot.Text = "Izgubili ste život!";
+            this.plusPet.AutoSize = true;
+            this.plusPet.BackColor = System.Drawing.Color.Firebrick;
+            this.plusPet.Enabled = false;
+            this.plusPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.plusPet.ForeColor = System.Drawing.Color.Transparent;
+            this.plusPet.Location = new System.Drawing.Point(180, 128);
+            this.plusPet.Name = "plusPet";
+            this.plusPet.Size = new System.Drawing.Size(150, 31);
+            this.plusPet.TabIndex = 13;
+            this.plusPet.Text = "+5 bodova";
             // 
             // Form1
             // 
@@ -190,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(532, 553);
-            this.Controls.Add(this.labelaZivot);
+            this.Controls.Add(this.plusPet);
             this.Controls.Add(this.srce3);
             this.Controls.Add(this.srce2);
             this.Controls.Add(this.srce1);
@@ -201,14 +201,12 @@
             this.Controls.Add(this.prepreka2);
             this.Controls.Add(this.prepreka1);
             this.Controls.Add(this.brod);
-
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Raketa";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -237,7 +235,7 @@
         private System.Windows.Forms.PictureBox srce2;
         private System.Windows.Forms.PictureBox srce3;
         private System.Windows.Forms.Timer timerTitraj;
-        private System.Windows.Forms.Label labelaZivot;
+        private System.Windows.Forms.Label plusPet;
     }
 }
 
