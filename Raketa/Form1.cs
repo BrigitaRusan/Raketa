@@ -180,8 +180,6 @@ namespace Raketa
                         (progressBar1.Value + 60, 1000);
                 }
             }
-            progressBar1.Value -= 1;
-
 
             if (random.Next() % 100 == 0)
                 StvoriKomet();
@@ -225,8 +223,11 @@ namespace Raketa
                     }
                 }
             }
-
+            progressBar1.Value -= 1;
             Invalidate();
+
+
+
             if (progressBar1.Value == 0)
             {
                 GameOver();
@@ -269,7 +270,7 @@ namespace Raketa
                             plusPet.Visible = true;
                             await Task.Delay(1000); // Čeka 1 sekundu
                             plusPet.Visible = false;
-                        //-------------
+                        //---------------------------------
                         return;
                         }
                     }
