@@ -69,6 +69,7 @@ namespace Raketa
             if (e.KeyCode == Keys.Escape)
             {
                 progressBar1.Value = 1;
+                GameOver();
                 Close();
             }
         }
@@ -181,6 +182,9 @@ namespace Raketa
                 }
             }
 
+
+            progressBar1.Value -= 1;
+
             if (random.Next() % 100 == 0)
                 StvoriKomet();
 
@@ -223,39 +227,40 @@ namespace Raketa
                     }
                 }
             }
-            progressBar1.Value -= 1;
+
+
             Invalidate();
-
-
 
             if (progressBar1.Value == 0)
             {
                 GameOver();
                 return;
             }
-            else if (brod.Bounds.IntersectsWith(prepreka1.Bounds)
+            if (brod.Bounds.IntersectsWith(prepreka1.Bounds)
                 || brod.Bounds.IntersectsWith(prepreka2.Bounds))
             {
                 Pauziraj();
                 return;
             }
             foreach (Control kontrola in Controls)
+            {
+                if (kontrola is PictureBox x && (string)x.Tag == "komet")
                 {
-                    if (kontrola is PictureBox x && (string)x.Tag == "komet")
+                    if (brod.Bounds.IntersectsWith(x.Bounds))
                     {
-                        if (brod.Bounds.IntersectsWith(x.Bounds))
-                        {
-                            Pauziraj();
+                        Pauziraj();
 
-                            //------ukloni komet ako se sudari------
-                            x.Visible = false;
-                            Controls.Remove(kontrola);
-                            x.Dispose();
-                            //-------------
-                            return;
-                        }
+                        //------ukloni komet ako se sudari------
+                        x.Visible = false;
+                        Controls.Remove(kontrola);
+                        x.Dispose();
+                        //-------------
+                        return;
                     }
-
+                }
+            }
+                foreach (Control kontrola in Controls)
+                {
                     if (kontrola is PictureBox y && (string)y.Tag == "gorivo")
                     {
                         if (brod.Bounds.IntersectsWith(y.Bounds))
@@ -318,7 +323,7 @@ namespace Raketa
             labelaRestartPoruka.Visible = true;
             MessageBox.Show("Osvojeni bodovi: " + bodovi,
                 "Igra je završila!");
-            for(int i = Controls.Count - 1; i >= 0; i--)
+            for (int i = Controls.Count - 1; i >= 0; i--)
             {
                 if (Controls[i] is PictureBox x && (string)x.Tag == "komet")
                 {
@@ -326,7 +331,9 @@ namespace Raketa
                     Controls.Remove(Controls[i]);
                     x.Dispose();
                 }
-
+            }
+            for (int i = Controls.Count - 1; i >= 0; i--)
+            {
                 if (Controls[i] is PictureBox y && (string)y.Tag == "gorivo")
                 {
                     y.Visible = false;

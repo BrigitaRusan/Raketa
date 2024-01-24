@@ -230,12 +230,12 @@
         private System.Windows.Forms.PictureBox prepreka2;
         private System.Windows.Forms.Label labelaRestartPoruka;
         private System.Windows.Forms.Label labelaPauza;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.PictureBox srce1;
         private System.Windows.Forms.PictureBox srce2;
         private System.Windows.Forms.PictureBox srce3;
         private System.Windows.Forms.Timer timerTitraj;
         private System.Windows.Forms.Label plusPet;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
